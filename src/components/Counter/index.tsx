@@ -1,0 +1,19 @@
+import { View, Text } from 'react-native';
+import { styles } from './styles';
+
+type Props = {
+  label: string;
+  value: number;
+  color: string;
+};
+
+export function Counter({ label, value, color }: Props) {
+  return (
+    <View style={styles.container}>
+      <Text style={[styles.label, { color }]}>{label}</Text>
+      <View style={styles.badge}>
+        <Text style={styles.badgeText}>{value}</Text>
+      </View>
+    </View>
+  );
+}
